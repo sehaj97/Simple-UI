@@ -1,21 +1,26 @@
+import { ButtonHTMLAttributes } from "react";
 
-interface ButtonProps {
-  danger?: boolean;
-  backgroundColor?: string;
+export enum ButtonType {
+  PRIMARY = "blue",
+  SECONDARY = "gray",
+  SUCCESS = "green",
+  DANGER = "red"
+  // Add more types as needed
+}
+
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  mode?: ButtonType;
   label: string;
-  onClick?: () => void;
 }
 export const Button = ({
-  danger = false,
-  backgroundColor,
+  mode = ButtonType.PRIMARY,
   label,
   ...props
 }: ButtonProps) => {
-  const mode = danger ? 'text-red-400' : 'text-blue-400';
   return (
     <button
       type="button"
-      className={[backgroundColor, mode].join(' ')}
+      className={`text-${mode}-400 border border-${mode}-400 hover:bg-${mode}-400 hover:text-white focus:bg-${mode}-700 focus:text-white`}
       {...props}
     >
       {label}
