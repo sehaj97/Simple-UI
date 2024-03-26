@@ -29,7 +29,7 @@ export const UserInput: React.FC<UserInputProps> = ({
                 id={id}
                 type={type}
                 placeholder={placeholderValue}
-                className={`mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
+                className={`mt-1 block sm:w-[200px] md:w-[300px] px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
                 {...props}
             />
         </div>

@@ -29,7 +29,7 @@ export const Password: Story = {
     type: UserInputType.PASSWORD,
     id:'passwordText',
     labelText: "Password",
-    placeholderValue: "Enter your password here",
+    placeholderValue: "Enter your password here...",
     tabIndex:0
   },
 };
@@ -39,7 +39,7 @@ export const Email: Story = {
     type: UserInputType.EMAIL,
     id:'emailText',
     labelText: "Email",
-    placeholderValue: "Enter your Email here",
+    placeholderValue: "Enter your Email here...",
     tabIndex:0
   },
 };
